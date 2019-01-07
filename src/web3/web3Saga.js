@@ -10,6 +10,8 @@ export function * initializeWeb3 ({ options }) {
   try {
     var web3 = {}
 
+    console.log('options', options)
+
     if (options.provider) {
       web3 = new Web3(options.provider)
       web3.eth.cacheSendTransaction = txObject =>
